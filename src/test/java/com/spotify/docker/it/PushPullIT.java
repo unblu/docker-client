@@ -46,13 +46,13 @@ import com.spotify.docker.client.messages.PortBinding;
 import com.spotify.docker.client.messages.RegistryAuth;
 import com.spotify.docker.client.messages.RegistryConfigs;
 
+import jakarta.ws.rs.NotAuthorizedException;
+
 import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
-
-import javax.ws.rs.NotAuthorizedException;
 
 import org.junit.After;
 import org.junit.Before;
