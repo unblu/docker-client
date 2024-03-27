@@ -7,12 +7,13 @@
     <version>5</version>
   </parent>
 
+  <groupId>unblu.patched.com.spotify</groupId>
   <artifactId>docker-client</artifactId>
-  <version>8.16.1-SNAPSHOT</version>
+  <version>8.16.1-unblu-1</version>
   <packaging>jar</packaging>
   <name>docker-client</name>
   <description>A docker client</description>
-  <url>https://github.com/spotify/docker-client</url>
+  <url>https://github.com/unblu/docker-client</url>
 
   <licenses>
     <license>
@@ -25,7 +26,7 @@
   <scm>
     <connection>scm:git:https://github.com/spotify/docker-client</connection>
     <developerConnection>scm:git:git@github.com:spotify/docker-client</developerConnection>
-    <url>https://github.com/spotify/docker-client</url>
+    <url>https://github.com/unblu/docker-client</url>
     <tag>HEAD</tag>
   </scm>
 
