@@ -50,11 +50,15 @@ public class DockerHostTest {
 
   @Test
   public void testDefaultDockerEndpoint() throws Exception {
-    when(systemDelegate.getProperty("os.name")).thenReturn("linux", "mac", "other");
+    when(systemDelegate.getProperty("os.name"))
+        .thenReturn("linux", "mac", "Windows 10", "Windows 11", "Windows Server 2022", "other");
     DockerHost.setSystemDelegate(systemDelegate);
 
     assertThat(DockerHost.defaultDockerEndpoint(), equalTo("unix:///var/run/docker.sock"));
     assertThat(DockerHost.defaultDockerEndpoint(), equalTo("unix:///var/run/docker.sock"));
+    assertThat(DockerHost.defaultDockerEndpoint(), equalTo("npipe:////./pipe/docker_engine"));
+    assertThat(DockerHost.defaultDockerEndpoint(), equalTo("npipe:////./pipe/docker_engine"));
+    assertThat(DockerHost.defaultDockerEndpoint(), equalTo("npipe:////./pipe/docker_engine"));
     assertThat(DockerHost.defaultDockerEndpoint(), equalTo("localhost:2375"));
   }
 
